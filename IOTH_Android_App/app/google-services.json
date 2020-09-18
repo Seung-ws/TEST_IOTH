@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "323217962574",
+    "firebase_url": "https://needchat-dde39.firebaseio.com",
+    "project_id": "needchat-dde39",
+    "storage_bucket": "needchat-dde39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323217962574:android:02502df3706a69b079751f",
+        "android_client_info": {
+          "package_name": "com.example.needchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323217962574-img0d69ea110ntgrc51sfd02cbms6gdc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.needchat",
+            "certificate_hash": "d36cdfb0f39bfed14383d518cf0623d2f4e4fb85"
+          }
+        },
+        {
+          "client_id": "323217962574-7m5hf6mapfuu0dj9mgs5b3tbp1s7qgge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKwZfdrHn7_TV_7XaHqc3E4L4CsIPm2UE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323217962574-7m5hf6mapfuu0dj9mgs5b3tbp1s7qgge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

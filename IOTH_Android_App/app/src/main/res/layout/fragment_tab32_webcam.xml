@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tab32f_bg"
+    android:padding="10dp"
+    android:background="@drawable/bg_usersetting">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+        android:background="@drawable/button_style2"
+
+    android:layout_gravity="center">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:minHeight="?attr/actionBarSize"
+
+            android:theme="?attr/actionBarTheme" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="모션감지 저장 정보"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20sp"
+                />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ListView
+        android:id="@+id/tab32_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+
+        android:layout_weight="1">
+
+    </ListView>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tab32_image_panel"
+    android:padding="10dp"
+    android:layout_weight="1">
+
+</FrameLayout>
+
+</LinearLayout>
+
+</FrameLayout>

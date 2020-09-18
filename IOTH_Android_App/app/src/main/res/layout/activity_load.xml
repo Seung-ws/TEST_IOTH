@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3"
+   >
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/titlelogo2"
+        android:layout_gravity="center"
+        android:translationY="-150dp"
+        android:stateListAnimator="@anim/fade_out"
+        />
+    <ProgressBar
+        android:id="@+id/load_progressBar"
+        style="@android:style/Widget.Holo.Light"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:indeterminateTint="#ff0000"
+        android:indeterminateTintMode="src_atop" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:translationY="70dp"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:text="구글계정 연동 중..." />
+
+    <Button
+        android:id="@+id/load_btn1"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:alpha="0"
+
+        android:onClick="LoginTest"
+        android:layout_gravity="bottom|center"
+        android:translationY="-100dp"
+        android:enabled="false"
+        android:text="구글 아이디로 시작하기" />
+</FrameLayout>
