@@ -32,8 +32,8 @@
    		type="javax.sql.DataSource"
    		driverClassName="oracle.jdbc.OracleDriver"
    		url="jdbc:oracle:thin:@localhost:1521:XE" 
-   		username="e_b664"
-   		password="lov3"
+   		username="test"
+   		password="test"
    		maxactive="50"
    		MaxWait="-1"
     />
