@@ -1,0 +1,5 @@
+package application.DataBase;
+
+public class GoogleUserAccount {
+
+}

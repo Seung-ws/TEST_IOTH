@@ -1,0 +1,103 @@
+package application.DataBase;
+
+import java.sql.Date;
+import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import application.Message.FileCommand;
+import application.Message.FreeCommand;
+import application.Message.SystemCommand;
+import application.Server.SocketClient;
+
+public class DBTHG extends DBConnector {
+	public DBTHG() {
+		tryConnect();
+	}
+	public void DBTHG추가(Date date,String temp,String hum, String gas) {
+	
+		if(tryConnect())
+		{
+			System.out.println("THG중복시간없어서 추가");
+			try {
+				String query="insert into HomeServerTHG(adate ,temp,hum,gas) values(?,?,?,?)";
+				pstmt=con.prepareStatement(query);
+				pstmt.setDate(1, date);
+				pstmt.setString(2,temp);
+				pstmt.setString(3, hum);
+				pstmt.setString(4, gas);
+				pstmt.executeQuery();
+				pstmt.close();
+				con.close();
+				}catch(Exception e)
+				{
+					System.out.println(e);
+				}	
+		}
+		System.out.println("THG중복시간있어서 패스");
+		
+	}
+	
+	public JSONArray 단일자료얻기()
+	{
+		tryConnect();
+		JSONArray jsonArr=new JSONArray();
+		try {
+			String query="Select temp,hum,gas from homeserverthg where rownum=1 order by adate desc";
+			pstmt=con.prepareStatement(query);
+			ResultSet rs=pstmt.executeQuery();
+			while(rs.next())
+			{
+				JSONObject object=new JSONObject();
+				object.put("Temp",rs.getString(1));
+				object.put("Hum",rs.getString(2));
+				object.put("Gas",rs.getString(3));
+				jsonArr.add(object);
+			}
+			rs.close();
+			pstmt.close();
+			con.close();
+		}catch(Exception e)
+		{
+			System.out.println("db단일자료 얻기"+e);
+		}
+		return jsonArr;
+	}
+	public JSONArray time7list() {
+		tryConnect();
+		JSONArray jsonArr=new JSONArray();
+		try {
+		String query="select * from " + 
+				"(select * from " + 
+				"(select t1.adate,t1.temp,t1.hum,t1.gas " + 
+				" from homeserverthg t1, " + 
+				"(select bdate,max(adate) as num from homeserverthg group by bdate order by bdate) t2 " + 
+				"where t1.adate=t2.num order by t1.adate desc) where rownum<7) order by rownum desc";
+		pstmt=con.prepareStatement(query);
+		ResultSet rs=pstmt.executeQuery();
+		SimpleDateFormat sdf=new SimpleDateFormat("MM/dd-HH");
+		while(rs.next())
+		{
+			JSONObject object=new JSONObject();
+			object.put("time", ""+sdf.format(rs.getDate(1)));
+			object.put("Temp", rs.getString(2));
+			object.put("Hum", rs.getString(3));
+			object.put("Gas",rs.getString(4));
+			jsonArr.add(object);
+		}
+		
+		rs.close();
+		pstmt.close();
+		con.close();
+		}catch(Exception e)
+		{
+			System.out.println("db오류"+e);
+		}
+		
+		
+		return jsonArr;
+	}
+	
+}

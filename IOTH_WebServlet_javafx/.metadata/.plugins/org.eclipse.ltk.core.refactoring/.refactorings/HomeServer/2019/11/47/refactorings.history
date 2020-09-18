@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;application.DataBase.TempGasData&apos; to &apos;TempHumGasData&apos;&#x0D;&#x0A;- Original project: &apos;HomeServer&apos;&#x0D;&#x0A;- Original element: &apos;application.DataBase.TempGasData&apos;&#x0D;&#x0A;- Renamed element: &apos;application.DataBase.TempHumGasData&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Rename similarly named elements&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TempGasData&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;application.DataBase{TempGasData.java[TempGasData" matchStrategy="1" name="TempHumGasData" qualified="false" references="true" similarDeclarations="true" stamp="1573966281783" textual="false" version="1.0"/>
+</session>

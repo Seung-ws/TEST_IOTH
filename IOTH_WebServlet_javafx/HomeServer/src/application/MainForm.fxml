@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="mainform" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1261.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainUnit">
+   <center>
+      <Pane fx:id="mainPanel" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane>
+               <children>
+                  <ImageView fx:id="backgroundImage" fitHeight="590.0" fitWidth="759.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                     <image>
+                      
+                     </image>
+                  </ImageView>
+                  <BorderPane fx:id="SubPane" prefHeight="590.0" prefWidth="1261.0">
+                     <left>
+                        <VBox alignment="CENTER" prefHeight="590.0" prefWidth="189.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#onServer" prefHeight="132.0" prefWidth="175.0" text="서버실행" />
+                              <Button mnemonicParsing="false" onAction="#offServer" prefHeight="137.0" prefWidth="174.0" text="서버종료" />
+                              <Button fx:id="Exitbtn" alignment="CENTER" mnemonicParsing="false" onAction="#onExitbtn" prefHeight="132.0" prefWidth="175.0" text="종료" />
+                           </children>
+                        </VBox>
+                     </left>
+                     <center>
+                        <AnchorPane prefHeight="328.0" prefWidth="504.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="ServerStateLabel" layoutX="14.0" layoutY="14.0" text="대기중" textFill="WHITE">
+                                 <font>
+                                    <Font size="96.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                     <right>
+                        <BorderPane prefHeight="573.0" prefWidth="757.0" BorderPane.alignment="CENTER">
+                           <bottom>
+                              <Pane prefHeight="380.0" prefWidth="598.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label fx:id="TimeLabel" layoutX="144.0" layoutY="92.0" text="00:00" textFill="WHITE">
+                                       <font>
+                                          <Font name="Comic Sans MS" size="200.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow height="47.69" radius="28.5325" width="68.44" />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="DateLabel" alignment="CENTER" layoutX="94.0" layoutY="14.0" prefHeight="92.0" prefWidth="649.0" text="2019. aug. 27. tue" textFill="WHITE">
+                                       <font>
+                                          <Font name="Comic Sans MS" size="65.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow height="47.69" radius="28.5325" width="68.44" />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </bottom>
+                        </BorderPane>
+                     </right>
+                  </BorderPane>
+                  <TextArea fx:id="stateres" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="500.0" />
+               </children>
+            </StackPane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
