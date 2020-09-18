@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+   >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:background="#FF8200"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ColorPicker"
+                android:textColor="#000000"
+                android:textAlignment="center"
+
+                android:textSize="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/PenTypeGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/type_Pen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:text="펜" />
+
+                    <RadioButton
+                        android:id="@+id/type_Brush"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:text="브러쉬" />
+
+                    <RadioButton
+                        android:id="@+id/type_crayon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="색연필" />
+
+                    <RadioButton
+                        android:id="@+id/type_Filler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="채우기" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/SizeControl"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:max="30"
+                android:min="2"
+                android:progress="2" />
+
+            <LinearLayout
+                android:id="@+id/ColorDialogPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#90202020"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/color_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="#90202020">
+
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/color_panel_subcolor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" />
+                    </HorizontalScrollView>
+
+                </FrameLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff505050"
+
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/redbtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/activity_drawable_colorbtn_red"
+
+                             />
+
+                        <Button
+                            android:id="@+id/orangebtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/activity_drawable_colorbtn_orange"
+                            />
+
+                        <Button
+                            android:id="@+id/yellowbtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/activity_drawable_colorbtn_yellow"
+                             />
+
+                        <Button
+                            android:id="@+id/greenbtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/activity_drawable_colorbtn_green"
+                             />
+
+                        <Button
+                            android:id="@+id/bluebtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/activity_drawable_colorbtn_blue"
+                             />
+
+                        <Button
+                            android:id="@+id/navybtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/activity_drawable_colorbtn_navy"
+                             />
+
+                        <Button
+                            android:id="@+id/puplebtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/activity_drawable_colorbtn_puple"
+                             />
+
+                        <Button
+                            android:id="@+id/brownbtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/activity_drawable_colorbtn_brown"
+                             />
+
+                        <Button
+                            android:id="@+id/darkseegreenbtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/activity_drawable_colorbtn_darkseegreen"
+                            />
+
+                        <Button
+                            android:id="@+id/pinkbtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/activity_drawable_colorbtn_pink"
+                            />
+
+                        <Button
+                            android:id="@+id/blackbtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/activity_drawable_colorbtn_black"
+                             />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</FrameLayout>

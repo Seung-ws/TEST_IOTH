@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mandara</string>
+
+    <!--activity_mandara_drawing-->
+    <string name="activity_Drawing_home">Home</string>
+    <string name="activity_Drawing_back">Back</string>
+    <string name="activity_Drawing_front">Forward</string>
+    <string name="activitiy_Drawing_menu">Save</string>
+
+</resources>
